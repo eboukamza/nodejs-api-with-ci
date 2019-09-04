@@ -1,4 +1,4 @@
-const {players} = require("../data/headtohead");
+const {players} = require('../data/headtohead');
 // sort players
 players.sort((a, b) => a.id - b.id);
 
