@@ -1,0 +1,11 @@
+{
+  "name": "poc-ci-heroku",
+  "version": "1.0.0",
+  "description": "poc of continugous integration in heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Elias Boukamza",
+  "license": "MIT"
+}
