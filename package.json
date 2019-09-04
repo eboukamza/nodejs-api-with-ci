@@ -2,10 +2,22 @@
   "name": "poc-ci-heroku",
   "version": "1.0.0",
   "description": "poc of continugous integration in heroku",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "node src/start.js",
+    "start:dev": "nodemon --inspect src/start.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**"
   },
   "author": "Elias Boukamza",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
