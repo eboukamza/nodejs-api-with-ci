@@ -1,9 +1,10 @@
 {
   "name": "poc-ci-heroku",
   "version": "1.0.0",
-  "description": "poc of continugous integration in heroku",
+  "description": "poc of continuous integration in heroku",
+  "main": "./src/start.js",
   "scripts": {
-    "start": "node src/start.js",
+    "start": "node ./src/start.js",
     "start:dev": "nodemon --inspect src/start.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -20,5 +21,8 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "10.16.3"
   }
 }
