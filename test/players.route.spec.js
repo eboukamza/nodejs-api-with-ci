@@ -49,7 +49,7 @@ describe('testing players route...', () => {
 
       const getResponse = await request.get("/players/17");
 
-      expect(getResponse.status).toBe(404);
+      expect(getResponse.status).toBe(400);
 
       done();
     });
