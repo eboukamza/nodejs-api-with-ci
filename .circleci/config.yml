@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/poc-heroku-ci
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+      - run:
+          name: build
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: test
+          command: npm test
+      - run:
+          name: lint
+          command: npm run lint

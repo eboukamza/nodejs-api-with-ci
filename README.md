@@ -28,3 +28,7 @@ Run `npm install`
 
 Run `npm run` for list all available scripts.
 
+#Heroku
+
+This app is deployed automatically in heroku and it is available in https://poc-heroku-ci.herokuapp.com/players
+
